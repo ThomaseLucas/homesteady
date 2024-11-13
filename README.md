@@ -8,18 +8,21 @@ This web app aims to support individuals starting with no prior knowledge in gar
 ## Features
 
 ### 1. Live/Accurate Data Based on Region
+
 - **What plants to grow**: Offers region-specific recommendations.
 - **Soil condition**: Provides guidance on soil quality and necessary amendments.
 - **Weather patterns**: Includes detailed local weather insights.
 - **Pest information**: Identifies common pests and pest management strategies.
 
 ### 2. Laws and Regulations Explanations
+
 - **Policies**: Overview of local and regional policies relevant to homesteading.
 - **Regulations**: Clear information on what users need to know before starting.
 - **Laws**: Summaries of relevant laws for garden and homestead management.
 - **Permits**: Details on necessary permits, if applicable.
 
 ### 3. 3D Garden Simulation
+
 - **Map API integration**: (Optional) Generates top-down views based on user location.
 - **3D garden walkthrough**: Allows users to visualize and interact with a virtual garden layout.
 - **Live plant data updates**: (Future feature) Tracks real-time plant health and growth data.
@@ -28,20 +31,23 @@ This web app aims to support individuals starting with no prior knowledge in gar
 
 ## Recommended Technologies
 
-- **Frontend**:  
+- **Frontend**:
+
   - **React** or **Vue** for creating an interactive and responsive user interface.
   - **Three.js** for 3D modeling capabilities.
 
-- **Backend**:  
+- **Backend**:
+
   - **Node.js** with **Express** for API management.
   - **Firebase** for user authentication.
   - **MongoDB** or **Firebase Firestore** for data storage and handling.
 
-- **3D Modeling**:  
+- **3D Modeling**:
+
   - **Three.js** for 3D rendering.
   - **Blender** for creating and customizing basic 3D models.
 
-- **Real-Time Data**:  
+- **Real-Time Data**:
   - **OpenWeatherMap API** for detailed, region-specific weather data.
   - **MQTT** or **HTTP protocols** for experimenting with IoT if applicable.
 
@@ -49,18 +55,34 @@ This web app aims to support individuals starting with no prior knowledge in gar
 
 ## Tools and Resources for 3D Garden Development
 
-- **Three.js Documentation**:  
+- **Three.js Documentation**:
+
   - Tutorials and resources for setting up 3D scenes, lighting, and model importing.
 
-- **Blender**:  
+- **Blender**:
+
   - A free, comprehensive 3D modeling tool for designing or editing assets.
 
-- **Sketchfab** and **Poly Haven**:  
+- **Sketchfab** and **Poly Haven**:
+
   - Platforms offering free or affordable 3D models that can be used for garden elements.
 
-- **React-Three-Fiber**:  
+- **React-Three-Fiber**:
   - A library that integrates Three.js with React, simplifying the management of 3D elements within React components.
 
---- 
+---
 
 This combination of technologies and resources will provide a rich and immersive experience for users interested in homesteading, with a focus on accessibility, realism, and practical information.
+
+## Useful Websites
+
+Here are some websites that can provide additional information and resources for homesteading and gardening:
+
+- **JavaScript Basics**:
+
+  - [JS refresher](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+  - Use this to review javascript basics
+
+- **How to get Started with three.js**:
+  - [Three.js](https://dev.to/th3wall/how-to-easily-get-started-with-threejs-part-1-go7)
+  - Use this to find understand the basics of three.js
