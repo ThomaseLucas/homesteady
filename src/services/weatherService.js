@@ -1,43 +1,5 @@
 const axios = require('axios');
 
-//Service to get weather data from the OpenWeatherMap API
-const getCoordinates = async (zipCode) => {
-    const geocodeUrl = `https://geocoding-api.open-meteo.com/v1/search?postalcode=${zipCode}&lang=en`;
-
-    try {
-        const response = await axios.get(geocodeUrl);
-        const data = await response.data;
-        const latitude = data.results[0].latitude;
-        const longitude = data.results[0].longitude;
-
-        return {latitude, longitude};
-    } catch (error) {
-        throw new Error('Error fetching coordinates');
-    }
-};
-
-//Service to get historical weather data from the Open Meteo API
-const getHistoricalWeatherData = async (latitude, longitude) => {
-    const startDate = '2023-1-1';
-    const endDate = '2024-1-1';
-
-    const weatherUrl = `https://archive-api.open-meteo.com/v1/archive?latitude=${latitude}&longitude=${longitude}&start_date=${startDate}&end_date=${endDate}&hourly=temperature_2m&temperature_unit=fahrenheit&wind_speed_unit=mph`;
-
-    try {
-        const response = await axios.get(weatherUrl);
-        const data = response.data;
-
-        //Calculate the average temperature
-        const temperatures = data.hourly.temperature_2m;
-        const avgTemp = temperatures.reduce((acc, temp) => acc + temp, 0) / temperatures.length;
-
-        return {avgTemp};
-    } catch (error) {
-        throw new Error('Error fetching historical weather data');
-    }
-};
-
-
 //Function to get weather data from the OpenWeatherMap API
 const getWeatherData = async (zipCode) => {
     const apiKey = process.env.WEATHER_API_KEY;
@@ -60,4 +22,4 @@ const getWeatherData = async (zipCode) => {
     }
 };
 
-module.exports = { getWeatherData, getCoordinates, getHistoricalWeatherData };
+module.exports = { getWeatherData };

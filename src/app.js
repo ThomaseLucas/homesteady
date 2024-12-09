@@ -7,8 +7,8 @@ app.use((req, res, next) => {
       "default-src 'self'; " +
       "script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'unsafe-inline'; " +
       "style-src 'self' https://cdnjs.cloudflare.com; " +
-      "img-src 'self' data:; " +
-      "connect-src 'self';"
+      "img-src 'self' https://perenual.com data:; " +
+      "connect-src 'self' https://phzmapi.org; " 
     );
     next();
   });
@@ -48,6 +48,11 @@ app.get('/3D-garden', (req, res) => {
 // define a route for the getting weather data from a user input of their zip code
 const weatherRoutes = require('./routes/weatherRoutes');
 app.use('/api/weather', weatherRoutes);
+
+// define a route for the getting hardiness zone data from a user input of their zip code
+const plantRoutes = require('./routes/plantRoutes');
+
+app.use('/api/plants', plantRoutes);
 
 
 

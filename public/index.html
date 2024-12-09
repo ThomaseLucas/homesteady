@@ -7,54 +7,33 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <header>
-    <h1>Homesteady</h1>
-    <img src="" alt="logo" />
+    <div class="header-container">
+      <h1>Homesteady</h1>
+      <h2>Thomas Lucas</h2>
+      <!-- If you want to add a logo image, you can uncomment this line and provide the logo path -->
+      <!-- <img src="path-to-logo.png" alt="Logo"> -->
+    </div>
   </header>
   <body>
-    <h1>Weather Info</h1>
+    <h1>Plant Finder</h1>
 
     <div id="input">
       <label for="zipCode">Enter your Zip Code: </label>
       <input type="text" id="zipCode" placeholder="Enter Zip Code" />
-      <button onclick="fetchWeatherData()">Get weather</button>
+      <button onclick="getHardinessZone()">Get plants!</button>
+    </div>
+
+    <div class="plant-card-container" id="plant-list">
+      <!-- Example of a plant card -->
+
+      <!-- More plant cards can go here -->
     </div>
 
     <div id="weather-container">
       <p>Loading weather data...</p>
     </div>
 
-    <script>
-      // Function to fetch weather data
-      function fetchWeatherData() {
-        const zipCode = document.getElementById("zipCode").value;
-
-        // Check if zipCode is provided
-        if (!zipCode) {
-          alert("Please enter a zip code");
-          return;
-        }
-
-        // Fetch current weather data
-        fetch(`/api/weather/get_weather?zip_code=${zipCode}`)
-          .then((response) => response.json())
-          .then((weatherData) => {
-            const weatherContainer =
-              document.getElementById("weather-container");
-            weatherContainer.innerHTML = `
-              <h2>Weather Info</h2>
-              <h2>Current Weather for ${weatherData.name}</h2>
-              <p>Temperature: ${weatherData.main.temp_farenheit}°F</p>
-              <p>Weather: ${weatherData.weather[0].description}</p>
-              <p>Humidity: ${weatherData.main.humidity}%</p>
-            `;
-          })
-          .catch((error) => {
-            console.error("Error fetching weather data: ", error);
-            const weatherContainer =
-              document.getElementById("weather-container");
-            weatherContainer.innerHTML = `<p>Error fetching weather data</p>`;
-          });
-      }
-    </script>
+    <script src="scripts/API calls/fetchHardiness.js"></script>
+    <script src="scripts/API calls/fetchWeather.js"></script>
   </body>
 </html>
