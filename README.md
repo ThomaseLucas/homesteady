@@ -1,88 +1,56 @@
-# Homesteady
+# Overview
 
-**Overview**  
-This web app aims to support individuals starting with no prior knowledge in gardening or homesteading. It will provide a step-by-step experience from setting up a first garden to managing a small homestead if users have the available land. The app will deliver essential information and resources, making it groundbreaking for beginners venturing into gardening.
+Homesteady is a web application designed to assist individuals in gardening and homesteading by providing actionable insights and resources tailored to their region. The app aims to make homesteading accessible to beginners and manageable for experienced users, bridging the gap between knowledge and implementation. As a software engineer, this project allowed me to explore full-stack development, user interaction, and API integration while building an app with real-world applications.
 
----
+To start a test server on your computer, follow these steps:
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+4. Start the server with `npm start`.
+5. Open your browser and navigate to `http://localhost:3000` to access the app's homepage.
 
-## Features
+This project serves to enhance my understanding of web development and deepen my knowledge of APIs, database management, and 3D modeling tools like Three.js.
 
-### 1. Live/Accurate Data Based on Region
-
-- **What plants to grow**: Offers region-specific recommendations.
-- **Soil condition**: Provides guidance on soil quality and necessary amendments.
-- **Weather patterns**: Includes detailed local weather insights.
-- **Pest information**: Identifies common pests and pest management strategies.
-
-### 2. Laws and Regulations Explanations
-
-- **Policies**: Overview of local and regional policies relevant to homesteading.
-- **Regulations**: Clear information on what users need to know before starting.
-- **Laws**: Summaries of relevant laws for garden and homestead management.
-- **Permits**: Details on necessary permits, if applicable.
-
-### 3. 3D Garden Simulation
-
-- **Map API integration**: (Optional) Generates top-down views based on user location.
-- **3D garden walkthrough**: Allows users to visualize and interact with a virtual garden layout.
-- **Live plant data updates**: (Future feature) Tracks real-time plant health and growth data.
+[Software Demo Video](http://youtube.link.goes.here)
 
 ---
 
-## Recommended Technologies
+# Web Pages
 
-- **Frontend**:
+- **Homepage**: Introduces the app and provides a search bar for users to input their zip code. Dynamically displays weather and regional data upon submission.
+- **3D Garden Page**: Provides an interactive 3D simulation of a customizable garden layout using Three.js. Users can add and modify garden elements based on recommendations.
 
-  - **React** or **Vue** for creating an interactive and responsive user interface.
-  - **Three.js** for 3D modeling capabilities.
-
-- **Backend**:
-
-  - **Node.js** with **Express** for API management.
-  - **Firebase** for user authentication.
-  - **MongoDB** or **Firebase Firestore** for data storage and handling.
-
-- **3D Modeling**:
-
-  - **Three.js** for 3D rendering.
-  - **Blender** for creating and customizing basic 3D models.
-
-- **Real-Time Data**:
-  - **OpenWeatherMap API** for detailed, region-specific weather data.
-  - **MQTT** or **HTTP protocols** for experimenting with IoT if applicable.
+Dynamic transitions occur through navigation links, and data refreshes dynamically without page reloads using React components.
 
 ---
 
-## Tools and Resources for 3D Garden Development
+# Development Environment
 
-- **Three.js Documentation**:
-
-  - Tutorials and resources for setting up 3D scenes, lighting, and model importing.
-
-- **Blender**:
-
-  - A free, comprehensive 3D modeling tool for designing or editing assets.
-
-- **Sketchfab** and **Poly Haven**:
-
-  - Platforms offering free or affordable 3D models that can be used for garden elements.
-
-- **React-Three-Fiber**:
-  - A library that integrates Three.js with React, simplifying the management of 3D elements within React components.
+- **Development Tools**: 
+  - **Visual Studio Code** for coding.
+  - **Postman** for API testing.
+  - **Node.js** with **Express** for backend development.
+- **Programming Languages and Libraries**:
+  - **JavaScript** for frontend and backend logic.
+  - **Three.js** for 3D modeling.
+  - **OpenWeatherMap API** for retrieving live weather data.
 
 ---
 
-This combination of technologies and resources will provide a rich and immersive experience for users interested in homesteading, with a focus on accessibility, realism, and practical information.
+# Useful Websites
 
-## Useful Websites
+* [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+* [Three.js Guide](https://dev.to/th3wall/how-to-easily-get-started-with-threejs-part-1-go7)
+* [OpenWeatherMap API](https://openweathermap.org/api)
 
-Here are some websites that can provide additional information and resources for homesteading and gardening:
+---
 
-- **JavaScript Basics**:
+# Future Work
 
-  - [JS refresher](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-  - Use this to review javascript basics
+* **Enhance Filtering Options**: Add more user-friendly filters for plant recommendations, including soil type and available sunlight.
+* **Expand 3D Functionality**: Enable real-time data updates and integrate plant health monitoring.
+* **Add IoT Capabilities**: Explore hardware integrations for live soil and weather monitoring.
+* **Seasonal Planning**: Implement calendar-based planting suggestions for long-term homestead management.
+* **Mobile Optimization**: Design a responsive layout for seamless mobile use.
 
-- **How to get Started with three.js**:
-  - [Three.js](https://dev.to/th3wall/how-to-easily-get-started-with-threejs-part-1-go7)
-  - Use this to find understand the basics of three.js
+---
